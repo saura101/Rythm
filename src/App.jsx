@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import viteLogo from '/vite.svg'
+import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Playlist from './components/Playlist'
@@ -9,14 +10,18 @@ function App() {
 
   return (
     <>
-      <div>
-        <img src={viteLogo} className="logo" alt="Vite logo" />
-      </div>
-      <h1>Hello world</h1>
       <Header/>
-      <Footer/>
-      <Playlist/>
-      <Sidebar/>
+      <div className='player-container'>
+          <div className='side-bar'>
+            <Sidebar/>
+          </div>
+          <div className='playlist'>
+            <Playlist/>
+          </div>
+      </div>
+      <div className='footer'>
+        <Footer/>
+      </div>
     </>
   )
 }
