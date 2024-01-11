@@ -69,9 +69,44 @@ function Playlist() {
                 </div>
                 <div className="playlist-body">
                     <p>PLAYLIST</p>
-                    <h1>best of youtube</h1>
+                    <h1>Best of YouTube</h1>
                 </div>
            </div>
+           <div className="playlist-list">
+                <div className="list-id">
+                    #
+                </div>
+                <div className="list-title">
+                    TITLE
+                </div>
+                <div className="list-album">
+                    ALBUM
+                </div>
+                <div className="list-duration">
+                    DURATION
+                </div>
+           </div>
+           <div className="list-container">
+                {playlist.map((item)=>{
+                    return (
+                        <div className="playlist-list">
+                            <div className="list-id">
+                                {item.id}
+                            </div>
+                            <div className="list-title">
+                                {item.title}
+                            </div>
+                            <div className="list-album">
+                                {item.album}
+                            </div>
+                            <div className="list-duration">
+                                {item.duration}
+                            </div>
+                        </div>
+                    )
+                })}
+           </div>
+
         </div>
     )
 }
